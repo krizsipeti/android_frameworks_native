@@ -41,7 +41,7 @@ Overlay::Overlay(overlay_set_fd_hook set_fd,
 Overlay::~Overlay() {
 }
 
-status_t Overlay::dequeueBuffer(void** buffer)
+status_t Overlay::dequeueBuffer(void** /*buffer*/)
 {
     return mStatus;
 }
@@ -53,12 +53,12 @@ status_t Overlay::queueBuffer(void* buffer)
     return mStatus;
 }
 
-status_t Overlay::resizeInput(uint32_t width, uint32_t height)
+status_t Overlay::resizeInput(uint32_t /*width*/, uint32_t /*height*/)
 {
     return mStatus;
 }
 
-status_t Overlay::setParameter(int param, int value)
+status_t Overlay::setParameter(int /*param*/, int /*value*/)
 {
     return mStatus;
 }
@@ -78,7 +78,7 @@ status_t Overlay::setCrop(uint32_t x, uint32_t y, uint32_t w, uint32_t h)
     }
 #endif
 
-status_t Overlay::getCrop(uint32_t* x, uint32_t* y, uint32_t* w, uint32_t* h)
+status_t Overlay::getCrop(uint32_t* /*x*/, uint32_t* /*y*/, uint32_t* /*w*/, uint32_t* /*h*/)
 {
     return mStatus;
 }
@@ -95,7 +95,7 @@ int32_t Overlay::getBufferCount() const
     return 0;
 }
 
-void* Overlay::getBufferAddress(void* buffer)
+void* Overlay::getBufferAddress(void* /*buffer*/)
 {
     return 0;
 }
